@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué invitan?</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      background-color: transparent;
+      color: #fff;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #ccc;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ccc;
+    }
+
+    /* Cuadro emergente */
+    .mensaje {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #111;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Qué invitan?</h1>
+  <input type="text" placeholder="Escribe tu respuesta aquí...">
+  <button onclick="mostrarMensaje()">Enviar</button>
+
+  <div class="mensaje" id="mensaje">
+     Voy a buscarla igual.
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
